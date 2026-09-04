@@ -23,7 +23,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
           className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
           activeProps={{
             className:
-              "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium bg-accent/10 text-accent-foreground",
+              "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium bg-accent/10 text-accent",
           }}
         >
           <Icon className="h-4 w-4" />
