@@ -25,7 +25,7 @@ export const Route = createFileRoute("/copilot")({
       },
     ],
   }),
-  component: Copilot;
+  component: Copilot,
 });
 
 const SYSTEM =
