@@ -41,15 +41,15 @@ export const Route = createFileRoute("/studio")({
 const SYSTEM =
   "You are a professional sales communication assistant. Write clear, appropriate emails based only on the information given. Never invent facts, prices, or commitments not provided by the user. Match the selected tone and audience. Always start your reply with a line beginning 'Subject:' followed by the email body.";
 
-const EMAIL_TYPES = [
+const EMAIL_TYPES: string[] = [
   "Client Follow-up",
   "Manager Update",
   "Store Report",
   "Product Enquiry",
   "Customer Response",
 ];
-const AUDIENCES = ["Customer", "Store Manager", "Sales Manager", "Team Member"];
-const TONES = ["Professional", "Friendly", "Persuasive", "Concise"];
+const AUDIENCES: string[] = ["Customer", "Store Manager", "Sales Manager", "Team Member"];
+const TONES: string[] = ["Professional", "Friendly", "Persuasive", "Concise"];
 
 function Field({
   label,
@@ -83,9 +83,9 @@ function Field({
 
 function Studio() {
   const run = useServerFn(generateAiText);
-  const [type, setType] = useState(EMAIL_TYPES[0]);
-  const [audience, setAudience] = useState(AUDIENCES[0]);
-  const [tone, setTone] = useState(TONES[0]);
+  const [type, setType] = useState("Client Follow-up");
+  const [audience, setAudience] = useState("Customer");
+  const [tone, setTone] = useState("Professional");
   const [info, setInfo] = useState("");
   const [output, setOutput] = useState("");
   const [error, setError] = useState("");
